@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Tooling - Wormhole Development Book</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../introduction/introduction.html">Introduction</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Overview</li><li class="chapter-item expanded "><a href="../../dapps/0_xdappOverview.html"><strong aria-hidden="true">1.</strong> xDapps</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../dapps/1_defiBasics.html"><strong aria-hidden="true">1.1.</strong> Ecosystem Basics</a></li><li class="chapter-item expanded "><a href="../../dapps/2_crossChainInteroperability.html"><strong aria-hidden="true">1.2.</strong> Blockchain Interoperability</a></li><li class="chapter-item expanded "><a href="../../dapps/3_xdataxassets.html"><strong aria-hidden="true">1.3.</strong> xData &amp; xAssets</a></li><li class="chapter-item expanded "><a href="../../dapps/4_whatIsanXdapp.html"><strong aria-hidden="true">1.4.</strong> What is an xDapp?</a></li><li class="chapter-item expanded "><a href="../../dapps/5_advantages.html"><strong aria-hidden="true">1.5.</strong> Advantages of xDapps</a></li></ol></li><li class="chapter-item expanded "><a href="../../wormhole/0_wormholeOverview.html"><strong aria-hidden="true">2.</strong> Wormhole</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../wormhole/1_whatIsWormhole.html"><strong aria-hidden="true">2.1.</strong> What is Wormhole?</a></li><li class="chapter-item expanded "><a href="../../wormhole/2_architectureOverview.html"><strong aria-hidden="true">2.2.</strong> Architecture Overview</a></li><li class="chapter-item expanded "><a href="../../wormhole/3_coreLayerContracts.html"><strong aria-hidden="true">2.3.</strong> Core Layer Contracts</a></li><li class="chapter-item expanded "><a href="../../wormhole/4_vaa.html"><strong aria-hidden="true">2.4.</strong> VAA: Verified Action Approval</a></li><li class="chapter-item expanded "><a href="../../wormhole/5_guardianNetwork.html"><strong aria-hidden="true">2.5.</strong> Guardian Network</a></li><li class="chapter-item expanded "><a href="../../wormhole/6_relayers.html"><strong aria-hidden="true">2.6.</strong> Relayers</a></li><li class="chapter-item expanded "><a href="../../wormhole/7_xAssetBridge.html"><strong aria-hidden="true">2.7.</strong> xAsset Bridge</a></li><li class="chapter-item expanded "><a href="../../wormhole/8_wormchain.html"><strong aria-hidden="true">2.8.</strong> Wormchain</a></li></ol></li><li class="chapter-item expanded "><a href="../../dapps/architecture/0_dappDesign.html"><strong aria-hidden="true">3.</strong> xDapp Design</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../dapps/architecture/1_keyConsiderations.html"><strong aria-hidden="true">3.1.</strong> Key Considerations</a></li><li class="chapter-item expanded "><a href="../../dapps/architecture/2_ecosystems.html"><strong aria-hidden="true">3.2.</strong> Ecosystems</a></li><li class="chapter-item expanded "><a href="../../dapps/architecture/3_protocolDesign.html"><strong aria-hidden="true">3.3.</strong> Protocol Design</a></li><li class="chapter-item expanded "><a href="../../dapps/architecture/4_topology.html"><strong aria-hidden="true">3.4.</strong> Topology</a></li><li class="chapter-item expanded "><a href="../../dapps/architecture/5_relayers.html"><strong aria-hidden="true">3.5.</strong> Relayers</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><li class="part-title">Developing xDapps</li><li class="chapter-item expanded "><a href="../../technical/env/environments.html"><strong aria-hidden="true">4.</strong> Environment Setup</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../technical/env/tilt.html"><strong aria-hidden="true">4.1.</strong> Tilt (Devnet)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../technical/env/troubleshooting.html"><strong aria-hidden="true">4.1.1.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="../../technical/env/wlv.html"><strong aria-hidden="true">4.2.</strong> Wormhole Local Validator</a></li><li class="chapter-item expanded "><a href="../../technical/env/testnet.html"><strong aria-hidden="true">4.3.</strong> Testnet</a></li><li class="chapter-item expanded "><a href="../../technical/env/tooling.html" class="active"><strong aria-hidden="true">4.4.</strong> Tooling</a></li></ol></li><li class="chapter-item expanded "><a href="../../technical/overview.html"><strong aria-hidden="true">5.</strong> Contract Development</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../technical/evm/overview.html"><strong aria-hidden="true">5.1.</strong> EVM</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../technical/evm/coreLayer.html"><strong aria-hidden="true">5.1.1.</strong> Core Layer</a></li><li class="chapter-item expanded "><a href="../../technical/evm/tokenLayer.html"><strong aria-hidden="true">5.1.2.</strong> Token Bridge Module</a></li><li class="chapter-item expanded "><a href="../../technical/evm/nftLayer.html"><strong aria-hidden="true">5.1.3.</strong> NFT Bridge Module</a></li><li class="chapter-item expanded "><a href="../../technical/evm/relayer.html"><strong aria-hidden="true">5.1.4.</strong> Relayer Module</a></li><li class="chapter-item expanded "><a href="../../technical/evm/bestPractices.html"><strong aria-hidden="true">5.1.5.</strong> Best Practices</a></li></ol></li><li class="chapter-item expanded "><a href="../../technical/solana/overview.html"><strong aria-hidden="true">5.2.</strong> Solana</a></li><li class="chapter-item expanded "><a href="../../technical/cosmos/overview.html"><strong aria-hidden="true">5.3.</strong> Cosmos</a></li><li class="chapter-item expanded "><a href="../../technical/algorand/overview.html"><strong aria-hidden="true">5.4.</strong> Algorand</a></li><li class="chapter-item expanded "><a href="../../technical/near/overview.html"><strong aria-hidden="true">5.5.</strong> Near</a></li><li class="chapter-item expanded "><a href="../../technical/aptos/overview.html"><strong aria-hidden="true">5.6.</strong> Aptos</a></li></ol></li><li class="chapter-item expanded "><a href="../../technical/relayer/overview.html"><strong aria-hidden="true">6.</strong> Relayers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../technical/relayer/genericRelayer.html"><strong aria-hidden="true">6.1.</strong> Generic Relayers</a></li><li class="chapter-item expanded "><a href="../../technical/relayer/specializedRelayers.html"><strong aria-hidden="true">6.2.</strong> Specialized Relayers</a></li></ol></li><li class="chapter-item expanded "><a href="../../technical/typescript/overview.html"><strong aria-hidden="true">7.</strong> Wormhole Typescript SDK</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../technical/typescript/attestingToken.html"><strong aria-hidden="true">7.1.</strong> Token Registration</a></li><li class="chapter-item expanded "><a href="../../technical/typescript/tokenTransfer.html"><strong aria-hidden="true">7.2.</strong> Token Transfer Basics</a></li><li class="chapter-item expanded "><a href="../../technical/typescript/cross-ecosystem-transfer.html"><strong aria-hidden="true">7.3.</strong> Cross-Ecosystem Transfer</a></li><li class="chapter-item expanded "><a href="../../technical/typescript/using-relayer.html"><strong aria-hidden="true">7.4.</strong> Using Relayers</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><li class="part-title">Reference</li><li class="chapter-item expanded "><a href="../../reference/overview.html"><strong aria-hidden="true">8.</strong> Other Resources</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../reference/glossary.html"><strong aria-hidden="true">8.1.</strong> Glossary</a></li><li class="chapter-item expanded "><a href="../../reference/usefulLinks.html"><strong aria-hidden="true">8.2.</strong> Useful Links</a></li><li class="chapter-item expanded "><a href="../../reference/contracts.html"><strong aria-hidden="true">8.3.</strong> Deployed Contracts</a></li><li class="chapter-item expanded "><a href="../../reference/rpcnodes.html"><strong aria-hidden="true">8.4.</strong> RPC Nodes</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu (default)</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Wormhole Development Book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/wormhole-foundation/xdapp-book" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="tooling"><a class="header" href="#tooling">Tooling</a></h1>
+<p>Regardless of the development environment that you use, there are a few wormhole-specific tools you should know about.</p>
+<h3 id="wormhole-core-repository"><a class="header" href="#wormhole-core-repository"><a href="https://github.com/wormhole-foundation/wormhole/tree/dev.v2/">Wormhole Core Repository</a></a></h3>
+<ul>
+<li>Most developers find it useful to clone the Wormhole Core repository. This repository provides the Devnet Tilt environment, plenty of useful code examples and tests, along with some utilities which do not have an official release package.</li>
+</ul>
+<h3 id="worm-cli-tool"><a class="header" href="#worm-cli-tool"><a href="https://github.com/wormhole-foundation/wormhole/tree/dev.v2/clients/js">Worm CLI tool</a></a></h3>
+<ul>
+<li>Swiss-Army Knife Utility CLI tool. Excellent for creating one-off VAAs, parsing VAAs, reading Wormhole contract configurations, and more.</li>
+</ul>
+<h3 id="orchestrator"><a class="header" href="#orchestrator"><a href="https://github.com/wormhole-foundation/xdapp-book/blob/main/projects/evm-messenger/orchestrator.js">Orchestrator</a></a></h3>
+<ul>
+<li>Small WIP tool which comes as part of the <a href="./wlv.html">Wormhole Local Validator</a> environment. Used to quickly deploy and redeploy multiple smart contracts. Will eventually become part of a larger deployment management tool.</li>
+</ul>
+<h3 id="wormhole-sdks"><a class="header" href="#wormhole-sdks"><a href="https://github.com/wormhole-foundation/wormhole/tree/dev.v2/sdk">Wormhole SDKs</a></a></h3>
+<ul>
+<li>Libraries in various languages to help with interacting with Wormhole contracts.</li>
+</ul>
+<h3 id="wormhole-typescript-sdk"><a class="header" href="#wormhole-typescript-sdk"><a href="https://www.npmjs.com/package/@certusone/wormhole-sdk">Wormhole Typescript SDK</a></a></h3>
+<ul>
+<li>Typescript SDK destributed on npm. Can greatly aid in writing frontend code for xDapps and utilizing the Wormhole Token Bridge directly.</li>
+</ul>
+<h3 id="wormhole-spy-sdk"><a class="header" href="#wormhole-spy-sdk"><a href="https://github.com/wormhole-foundation/wormhole/tree/dev.v2/spydk/js">Wormhole Spy SDK</a></a></h3>
+<ul>
+<li>The Wormhole Spy SDK allows you to listen to all of the activity on the Guardian Network.</li>
+</ul>
+<h3 id="reference-bridge-ui"><a class="header" href="#reference-bridge-ui"><a href="https://github.com/wormhole-foundation/example-token-bridge-ui">Reference Bridge UI</a></a></h3>
+<ul>
+<li>An example GUI which can be used to perform token transfers around the ecosystem.</li>
+</ul>
+<h3 id="explorer"><a class="header" href="#explorer"><a href="https://wormhole.com/explorer/">Explorer</a></a></h3>
+<ul>
+<li>Resource for looking at individual transfers statuses on mainnet and testnet.</li>
+</ul>
+<!--
+how to use on tilt?
+-->
+<!--
+Example projects
+-->
+<h2 id="example-projects"><a class="header" href="#example-projects">Example Projects</a></h2>
+<h3 id="basic-examples"><a class="header" href="#basic-examples"><a href="https://github.com/wormhole-foundation/xdapp-book/tree/main/projects">Basic Examples</a></a></h3>
+<ul>
+<li>Several example projects are bundled here. They show minimum-code examples for how to send messages, tokens, and other common functions.</li>
+</ul>
+<h3 id="icco"><a class="header" href="#icco"><a href="https://github.com/certusone/wormhole-icco">ICCO</a></a></h3>
+<ul>
+<li>Productionized, audited xDapp which does cross-chain token launches. Great example of what a robust xDapp, written across multiple ecosystems looks like.</li>
+</ul>
+<h3 id="native-swap"><a class="header" href="#native-swap"><a href="https://github.com/certusone/wormhole-nativeswap-example">Native Swap</a></a></h3>
+<ul>
+<li>Example cross-chain dex, utilizing the stablecoin highway model.</li>
+</ul>
+<h3 id="wormhole-examples"><a class="header" href="#wormhole-examples"><a href="https://github.com/certusone/wormhole-examples">Wormhole Examples</a></a></h3>
+<ul>
+<li>More example components. Has a mix of relayers, xDapps, NFT projects, and more.</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../technical/env/testnet.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../technical/overview.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../technical/env/testnet.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../technical/overview.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
